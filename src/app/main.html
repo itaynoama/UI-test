@@ -1,0 +1,148 @@
+<div id="page-wrapper" [ngClass]="{'open': toggle}">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar">
+            <li class="sidebar-main">
+                <a class="">Merkury</a>
+            </li>
+<!--            <li class="sidebar-title"><span>NAVIGATION</span></li>-->
+            <li class="sidebar-list selected">
+                <a [routerLink]="['Dashboard']"><span class="menu-icon fa fa-home" aria-hidden="true"></span>Home </a>
+            </li>
+            <li class="sidebar-list">
+                <a [routerLink]="['Tables']">Workflow <span class="menu-icon fa fa-table" aria-hidden="true"></span></a>
+            </li>
+            <li class="sidebar-list">
+                <a href="#">Statistics <span class="menu-icon fa fa-table" aria-hidden="true"></span></a>
+            </li>
+            <li class="sidebar-list">
+                <a href="#">Calendar <span class="menu-icon fa fa-calendar" aria-hidden="true"></span></a>
+            </li>
+            <li class="sidebar-list">
+                <a href="#">Users <span class="menu-icon fa fa-user-o" aria-hidden="true"></span></a>
+            </li>
+            <li class="sidebar-list">
+                <a href="#">Settings <span class="menu-icon fa fa-cog" aria-hidden="true"></span></a>
+            </li>
+        </ul>
+<!--
+        <div class="sidebar-footer">
+            <div class="col-xs-4">
+                <a href="https://github.com/ziyasal/rdash-angular2" target="_blank">
+                    Github
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="https://github.com/ziyasal/rdash-angular2/blob/master/README.md" target="_blank">
+                    About
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:void(0)">
+                    Support
+                </a>
+            </div>
+        </div>
+-->
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+        <div class="page-content">
+
+            <!-- Header Bar -->
+            <div class="row header">
+                <div class="col-xs-12">
+                    <div class="user pull-right">
+                        <div class="item dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle">
+                                <img src="app/public/img/avatar.jpg">
+                            </a>
+<!--
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">
+                                    Joe Bloggs
+                                </li>
+                                <li class="divider"></li>
+                                <li class="link">
+                                    <a href="javascript:void(0)">
+                                        Profile
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="javascript:void(0)">
+                                        Menu Item
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="javascript:void(0)">
+                                        Menu Item
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="link">
+                                    <a href="javascript:void(0)">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+-->
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="dropdown-toggle">
+                                <span class="msg-center">3</span>
+                                <i class="fa fa-bell" aria-hidden="true"></i>
+                            </a>
+<!--
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">
+                                    Notifications
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">Server Down!</a>
+                                </li>
+                            </ul>
+-->
+                        </div>
+                        <div class="item">
+                            <a href="javascript:void(0)" class="dropdown-toggle">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+<!--
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">
+                                    Notifications
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">Server Down!</a>
+                                </li>
+                            </ul>
+-->
+                        </div>
+                        <div class="itemButton">
+                            <button type="button" class="btn btn-primary">+ Add project</button>
+                        </div>
+                    </div>
+                    <div class="meta">
+                        <div class="page">
+                            <a (click)="toggleSidebar()">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </a>
+                            <div class="item">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Bar -->
+
+            <!--&lt;!&ndash; Main Content &ndash;&gt;-->
+            <router-outlet></router-outlet>
+
+        </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+</div><!-- End Page Wrapper -->
