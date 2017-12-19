@@ -20,28 +20,11 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         execute: function() {
             ServerListService = (function () {
                 function ServerListService() {
-                    this.servers = [{
-                            name: 'RDVMPC001',
-                            ip: '238.103.133.37',
-                            'tooltip': '',
-                            'tooltipcls': 'text-success',
-                            'icon': 'fa-check'
-                        },
-                        { name: 'RDVMPC002', ip: '68.66.63.170', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' },
-                        { name: 'RDESX003', ip: '209.25.191.61', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' },
-                        { name: 'RDVMPC003', ip: '76.117.212.33', 'tooltip': '', 'tooltipcls': 'text-danger', 'icon': 'fa-warning' },
-                        { name: 'RDESX003', ip: '209.25.191.61', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' },
-                        {
-                            name: 'RDESX003',
-                            ip: '209.25.191.61',
-                            'tooltip': 'Could not connect!',
-                            'tooltipcls': 'text-warning',
-                            'icon': 'fa-flash'
-                        },
-                        { name: 'RDESX003', ip: '209.25.191.61', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' },
-                        { name: 'RDESX003', ip: '209.25.191.61', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' },
-                        { name: 'RDESX003', ip: '209.25.191.61', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' },
-                        { name: 'RDESX003', ip: '209.25.191.61', 'tooltip': '', 'tooltipcls': 'text-success', 'icon': 'fa-check' }
+                    this.servers = [
+                        { name: 'New website for Symo.co', time: '5 days delays', tooltipcls: 'delays', icon: 'glyphicon-option-vertical', step: 'N' },
+                        { name: 'Free business PSD Template', time: '2 days delays', tooltipcls: 'delays', icon: 'glyphicon-option-vertical', step: 'F' },
+                        { name: 'New logo for JCD.pl', time: '5 days delays', tooltipcls: 'dayLeft', icon: 'glyphicon-option-vertical', step: 'N' },
+                        { name: 'Free Icons set vol.3', time: '10 days delays', tooltipcls: 'dayLeft', icon: 'glyphicon-option-vertical', step: 'F' }
                     ];
                 }
                 ServerListService.prototype.add = function (value) {

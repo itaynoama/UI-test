@@ -15,6 +15,8 @@ import {Tables} from './components/tables/tables';
 
 import {UserListService} from './services/user_list';
 import {ServerListService} from './services/server_list';
+import {ActivityListService} from './services/activity_list';
+
 
 @RouteConfig([
     {path: '/', component: Dashboard, name: 'Dashboard'},
@@ -60,5 +62,5 @@ class Main {
 }
 
 bootstrap(Main, [ROUTER_PROVIDERS, FORM_PROVIDERS,
-    ROUTER_PROVIDERS, HTTP_PROVIDERS, UserListService, ServerListService,
+    ROUTER_PROVIDERS, HTTP_PROVIDERS, UserListService, ServerListService, ActivityListService,
     bind(LocationStrategy).toClass(HashLocationStrategy)]);

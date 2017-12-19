@@ -20,22 +20,12 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         execute: function() {
             UserListService = (function () {
                 function UserListService() {
-                    this.users = [{
-                            id: 1,
-                            name: 'Joe Bloggs',
-                            role: 'Super Admin',
-                            account: 'AZ23045'
-                        }, {
-                            id: 2,
-                            name: 'Timothy Hernandez',
-                            role: 'Admin',
-                            account: 'AU24783'
-                        }, {
-                            id: 3,
-                            name: 'Joe Bickham',
-                            role: 'User',
-                            account: 'AM23781'
-                        }];
+                    this.users = [
+                        { img: 'https://fashionz.co.nz/wp-content/uploads/2016/11/Evelyn-circle-1.jpg', name: 'Nina Jones', message: 'Hey you! its me again :) i attached new (..)', time: '5 minutes ago', replyIcon: 'fa-reply', settingsIcon: 'fa-cog', select: 'selected' },
+                        { img: 'https://fashionz.co.nz/wp-content/uploads/2016/11/Evelyn-circle-1.jpg', name: 'Nina Jones', message: 'Hey! i attached sone new PSD files for (..)', time: 'About 20 hours ago', replyIcon: 'fa-reply', settingsIcon: 'fa-cog', select: 'selected' },
+                        { img: 'http://foodpictures.net/wp-content/uploads/2017/03/profile_picture_300x300-circle.png', name: 'James Smith', message: 'Good Morning, you are fired!', time: '2 days ago', replyIcon: 'fa-reply', settingsIcon: 'fa-cog' },
+                        { img: 'https://fashionz.co.nz/wp-content/uploads/2016/11/Evelyn-circle-1.jpg', name: 'Nina Jones', message: 'Hello Could you bring me coffee please ?', time: 'About 2 weeks ago', replyIcon: 'fa-reply', settingsIcon: 'fa-cog' }
+                    ];
                 }
                 UserListService.prototype.add = function (value) {
                     this.users.push(value);

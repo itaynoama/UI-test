@@ -15,6 +15,11 @@ import {ServerListService} from '../../services/server_list';
 import {UserListView} from '../user-list-view/user-list-view';
 import {UserListService} from '../../services/user_list';
 
+import {ActivityListView} from '../activity-list-view/activity-list-view';
+import {ActivityListService} from '../../services/activity_list';
+
+import {PieChartView} from '../pie-chart-view/pie-chart-view';
+
 
 @Component({
     selector: 'dashboard',
@@ -22,19 +27,22 @@ import {UserListService} from '../../services/user_list';
     templateUrl: 'app/components/dashboard/dashboard.html',
     styleUrls: ['app/components/dashboard/dashboard.css'],
     directives: [Title, RdWidget, RdWidgetHeader, RdWidgetBody,
-        RdWidgetFooter, RdLoading, ServerListView, UserListView]
+        RdWidgetFooter, RdLoading, ServerListView, UserListView, ActivityListView, PieChartView]
 })
 export class Dashboard {
     servers:any[];
     users:any[];
+    activitys:any[];
 
-    constructor(private serverListService:ServerListService, private userListService:UserListService) {
+    constructor(private serverListService:ServerListService, private userListService:UserListService, private activityListService:ActivityListService) {
         this.serverListService = serverListService;
         this.userListService = userListService;
+        this.activityListService = activityListService;
     }
 
     ngOnInit() {
         this.servers = this.serverListService.all();
         this.users = this.userListService.all();
+        this.activitys = this.activityListService.all();
     }
 }

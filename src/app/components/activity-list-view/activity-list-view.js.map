@@ -1,0 +1,1 @@
+{"version":3,"file":"activity-list-view.js","sourceRoot":"","sources":["activity-list-view.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;YAOA;gBAII;oBACI,IAAI,CAAC,KAAK,GAAG,EAAE,CAAC;gBACpB,CAAC;gBAXL;oBAAC,gBAAS,CAAC;wBACP,QAAQ,EAAE,oBAAoB;wBAC9B,UAAU,EAAE,CAAC,OAAO,CAAC;wBACrB,WAAW,EAAE,2DAA2D;qBAC3E,CAAC;;oCAAA;gBAQF,uBAAC;YAAD,CAAC,AAPD,IAOC;YAPD,+CAOC,CAAA"}

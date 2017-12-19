@@ -8,11 +8,7 @@ export class RdWidgetHeader {
     @Input()
     title:string;
 
-    @Input()
-    icon:string;
-
     constructor() {
         this.title = '';
-        this.icon = '';
     }
 }

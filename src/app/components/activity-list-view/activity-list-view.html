@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table activityTable">
+        <tbody>
+            <tr *ngFor="#activity of model">
+                <td>
+                    <div class="pull-left">
+                        <img src="{{activity.img}}" class="media-photo">
+                        <div class="{{activity.select}}" class="vl"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="textBox flex-parent">
+                        <div class="flex-child">
+                            <td><p><b>{{activity.name}} </b><span class="media-meta">{{activity.activity}}</span><b> {{activity.part}}</b></p></td>
+                        </div>
+                        <p class="{{activity.tooltipcls}}"><i class="fa {{activity.icon}}" aria-hidden="true"></i>{{activity.time}}</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

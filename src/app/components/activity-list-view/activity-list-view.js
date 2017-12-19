@@ -11,32 +11,29 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var RdWidgetHeader;
+    var ActivityListView;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            RdWidgetHeader = (function () {
-                function RdWidgetHeader() {
-                    this.title = '';
+            ActivityListView = (function () {
+                function ActivityListView() {
+                    this.model = [];
                 }
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', String)
-                ], RdWidgetHeader.prototype, "title", void 0);
-                RdWidgetHeader = __decorate([
+                ActivityListView = __decorate([
                     core_1.Component({
-                        selector: 'rd-widget-header',
-                        templateUrl: 'app/components/rd-widget-header/rd-widget-header.html'
+                        selector: 'activity-list-view',
+                        properties: ['model'],
+                        templateUrl: 'app/components/activity-list-view/activity-list-view.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], RdWidgetHeader);
-                return RdWidgetHeader;
+                ], ActivityListView);
+                return ActivityListView;
             }());
-            exports_1("RdWidgetHeader", RdWidgetHeader);
+            exports_1("ActivityListView", ActivityListView);
         }
     }
 });
-//# sourceMappingURL=rd-widget-header.js.map
+//# sourceMappingURL=activity-list-view.js.map

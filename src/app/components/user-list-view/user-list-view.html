@@ -1,20 +1,26 @@
 <div class="table-responsive">
-    <table class="table">
-        <thead>
-        <tr>
-            <th class="text-center">ID</th>
-            <th>Username</th>
-            <th>Role</th>
-            <th>Account</th>
-        </tr>
-        </thead>
+    <table class="table messageTable">
         <tbody>
-        <tr *ngFor="#user of model">
-            <td class="text-center">{{user.id}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.role}}</td>
-            <td>{{user.account}}</td>
+        <tr *ngFor="#user of model" class="{{user.select}}">
+            <td>
+                <div class="pull-left">
+                    <img src="{{user.img}}" class="media-photo">
+                </div>
+            </td>
+            <td>
+                <div class="textBox flex-parent">
+                    <div class="flex-child">
+                        <td><p><b>{{user.name}} </b><span class="media-meta">{{user.time}}</span></p></td>
+                    </div>
+                    <p>{{user.message}}</p>
+                    <span class="glypIcon">
+                        <i class="fa {{user.replyIcon}}"></i>
+                        <i class="fa {{user.settingsIcon}}"></i>
+                    </span>
+                </div>
+            </td>
         </tr>
         </tbody>
     </table>
 </div>
+

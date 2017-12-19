@@ -11,32 +11,29 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var RdWidgetHeader;
+    var PieChartView;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            RdWidgetHeader = (function () {
-                function RdWidgetHeader() {
-                    this.title = '';
+            PieChartView = (function () {
+                function PieChartView() {
+                    this.model = [];
                 }
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', String)
-                ], RdWidgetHeader.prototype, "title", void 0);
-                RdWidgetHeader = __decorate([
+                PieChartView = __decorate([
                     core_1.Component({
-                        selector: 'rd-widget-header',
-                        templateUrl: 'app/components/rd-widget-header/rd-widget-header.html'
+                        selector: 'pie-chart-view',
+                        properties: ['model'],
+                        templateUrl: 'app/components/pie-chart-view/pie-chart-view.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], RdWidgetHeader);
-                return RdWidgetHeader;
+                ], PieChartView);
+                return PieChartView;
             }());
-            exports_1("RdWidgetHeader", RdWidgetHeader);
+            exports_1("PieChartView", PieChartView);
         }
     }
 });
-//# sourceMappingURL=rd-widget-header.js.map
+//# sourceMappingURL=pie-chart-view.js.map
