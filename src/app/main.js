@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/platform/browser', 'angular2/http', 'angular2/common', 'angular2/router', './components/dashboard/dashboard', './components/tables/tables', './services/user_list', './services/server_list', './services/activity_list'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/platform/browser', 'angular2/router', './components/dashboard/dashboard', './services/message_list', './services/task_list', './services/activity_list'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/http', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, browser_1, http_1, common_1, router_1, dashboard_1, tables_1, user_list_1, server_list_1, activity_list_1;
+    var core_1, browser_1, router_1, dashboard_1, message_list_1, task_list_1, activity_list_1;
     var Main;
     return {
         setters:[
@@ -20,26 +20,17 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/http', 
             function (browser_1_1) {
                 browser_1 = browser_1_1;
             },
-            function (http_1_1) {
-                http_1 = http_1_1;
-            },
-            function (common_1_1) {
-                common_1 = common_1_1;
-            },
             function (router_1_1) {
                 router_1 = router_1_1;
             },
             function (dashboard_1_1) {
                 dashboard_1 = dashboard_1_1;
             },
-            function (tables_1_1) {
-                tables_1 = tables_1_1;
+            function (message_list_1_1) {
+                message_list_1 = message_list_1_1;
             },
-            function (user_list_1_1) {
-                user_list_1 = user_list_1_1;
-            },
-            function (server_list_1_1) {
-                server_list_1 = server_list_1_1;
+            function (task_list_1_1) {
+                task_list_1 = task_list_1_1;
             },
             function (activity_list_1_1) {
                 activity_list_1 = activity_list_1_1;
@@ -76,8 +67,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/http', 
                 };
                 Main = __decorate([
                     router_1.RouteConfig([
-                        { path: '/', component: dashboard_1.Dashboard, name: 'Dashboard' },
-                        { path: '/tables', component: tables_1.Tables, name: 'Tables' }
+                        { path: '/', component: dashboard_1.Dashboard, name: 'Dashboard' }
                     ]),
                     core_1.Component({
                         selector: 'app',
@@ -89,8 +79,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/http', 
                 ], Main);
                 return Main;
             }());
-            browser_1.bootstrap(Main, [router_1.ROUTER_PROVIDERS, common_1.FORM_PROVIDERS,
-                router_1.ROUTER_PROVIDERS, http_1.HTTP_PROVIDERS, user_list_1.UserListService, server_list_1.ServerListService, activity_list_1.ActivityListService,
+            browser_1.bootstrap(Main, [router_1.ROUTER_PROVIDERS, message_list_1.MessageListService, task_list_1.TaskListService, activity_list_1.ActivityListService,
                 core_1.bind(router_1.LocationStrategy).toClass(router_1.HashLocationStrategy)]);
         }
     }

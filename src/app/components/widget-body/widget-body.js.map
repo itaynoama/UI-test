@@ -1,0 +1,1 @@
+{"version":3,"file":"widget-body.js","sourceRoot":"","sources":["widget-body.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;YAMA;gBAKI;oBACI,IAAI,CAAC,OAAO,GAAG,EAAE,CAAC;gBACtB,CAAC;gBALD;oBAAC,YAAK,EAAE;;2DAAA;gBAPZ;oBAAC,gBAAS,CAAC;wBACP,QAAQ,EAAE,aAAa;wBACvB,UAAU,EAAE,CAAC,SAAS,CAAC;wBACvB,WAAW,EAAE,6CAA6C;qBAC7D,CAAC;;8BAAA;gBASF,iBAAC;YAAD,CAAC,AARD,IAQC;YARD,mCAQC,CAAA"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"task-list-view.js","sourceRoot":"","sources":["task-list-view.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;YAOA;gBAII;oBACI,IAAI,CAAC,KAAK,GAAG,EAAE,CAAC;gBACpB,CAAC;gBAXL;oBAAC,gBAAS,CAAC;wBACP,QAAQ,EAAE,gBAAgB;wBAC1B,UAAU,EAAE,CAAC,OAAO,CAAC;wBACrB,WAAW,EAAE,mDAAmD;qBACnE,CAAC;;gCAAA;gBAQF,mBAAC;YAAD,CAAC,AAPD,IAOC;YAPD,uCAOC,CAAA"}

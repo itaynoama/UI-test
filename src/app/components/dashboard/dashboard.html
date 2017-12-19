@@ -2,96 +2,61 @@
 
 <div class="row">
    <div class="col-lg-3">
-        <rd-widget>
-            <rd-widget-header title="Your Sales">
+        <widget>
+            <widget-header title="Your Sales">
                 <div class="periodButton">
                     <button type="button" class="btn btn-default">Period: <b>Last Year </b><i class="fa fa-angle-down"></i></button>
                 </div>
-            </rd-widget-header>
-            <rd-widget-body classes="medium no-padding">
+            </widget-header>
+            <widget-body classes="medium no-padding">
                 <pie-chart-view></pie-chart-view>
-            </rd-widget-body>
-        </rd-widget>
+            </widget-body>
+        </widget>
     </div>
     <div class="col-lg-9">
-        <rd-widget>
-            <rd-widget-header title="Report">
+        <widget>
+            <widget-header title="Report">
                 <div class="periodButton">
                     <button type="button" class="btn btn-default">Period: <b>Last Year </b><i class="fa fa-angle-down"></i></button>
                 </div>
-            </rd-widget-header>
-            <rd-widget-body classes="medium no-padding">
+            </widget-header>
+            <widget-body classes="medium no-padding">
                 <server-list-view [model]="servers"></server-list-view>
-            </rd-widget-body>
-        </rd-widget>
+            </widget-body>
+        </widget>
     </div> 
 </div>
 
 <div class="row">
     <div class="col-lg-4">
-        <rd-widget>
-            <rd-widget-header title="Tasks">
+        <widget>
+            <widget-header title="Tasks">
                 <div class="numberCircle">2</div>
                 <div class="numberCircleBlue">5</div>
-            </rd-widget-header>
-            <rd-widget-body classes="large no-padding">
-                <server-list-view [model]="servers"></server-list-view>
-            </rd-widget-body>
-        </rd-widget>
+            </widget-header>
+            <widget-body classes="large no-padding">
+                <task-list-view [model]="tasks"></task-list-view>
+            </widget-body>
+        </widget>
     </div>
     <div class="col-lg-4">
-        <rd-widget>
-            <rd-widget-header title="Messages">
+        <widget>
+            <widget-header title="Messages">
                 <div class="numberCircleBlue">2</div>
-            </rd-widget-header>
-            <rd-widget-body classes="large no-padding">
-                <user-list-view [model]="users"></user-list-view>
-            </rd-widget-body>
-        </rd-widget>
+            </widget-header>
+            <widget-body classes="large no-padding">
+                <message-list-view [model]="messages"></message-list-view>
+            </widget-body>
+        </widget>
     </div>
     <div class="col-lg-4">
-        <rd-widget>
-            <rd-widget-header title="Activity">
+        <widget>
+            <widget-header title="Activity">
                 <div class="numberCircleBlue">10</div>
-            </rd-widget-header>
-            <rd-widget-body classes="large no-padding">
+            </widget-header>
+            <widget-body classes="large no-padding">
                 <activity-list-view [model]="activitys"></activity-list-view>
-            </rd-widget-body>
-        </rd-widget>
+            </widget-body>
+        </widget>
     </div>
 </div>
-
-<!--
-<div class="row">
-    <div class="col-lg-6">
-        <rd-widget>
-            <rd-widget-header icon="fa-plus" title="Extras">
-                <button class="btn btn-sm btn-info" style="float: right">Button</button>
-            </rd-widget-header>
-            <rd-widget-body>
-                <div class="message">
-                    This is a standard message which will also work the ".no-padding" class, I can also <span
-                        class="error">be an error message!</span>
-                </div>
-                <hr/>
-                <div class="message">
-                    <a href="http://angular-ui.github.io/bootstrap/" target="_blank">UI Bootstrap</a> is included, so
-                    you can use
-                    <a href="#" tooltip="I'm a tooltip!">tooltips</a> and all of the other native Bootstrap JS
-                    components!
-                </div>
-            </rd-widget-body>
-        </rd-widget>
-    </div>
-    <div class="col-lg-6">
-        <rd-widget>
-            <rd-widget-header icon="fa-cog fa-spin" title="Loading Directive">
-                <a href="http://tobiasahlin.com/spinkit/" style="float: right" target="_blank">SpinKit</a>
-            </rd-widget-header>
-            <rd-widget-body>
-                <rd-loading></rd-loading>
-            </rd-widget-body>
-        </rd-widget>
-    </div>
-</div>
--->

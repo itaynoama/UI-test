@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table messageTable">
+        <tbody>
+        <tr *ngFor="#message of model" class="{{message.select}}">
+            <td>
+                <div class="pull-left">
+                    <img src="{{message.img}}" class="media-photo">
+                </div>
+            </td>
+            <td>
+                <div class="textBox flex-parent">
+                    <div class="flex-child">
+                        <td><p><b>{{message.name}} </b><span class="media-meta">{{message.time}}</span></p></td>
+                    </div>
+                    <p>{{message.message}}</p>
+                    <span class="glypIcon">
+                        <i class="fa {{message.replyIcon}}"></i>
+                        <i class="fa {{message.settingsIcon}}"></i>
+                    </span>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

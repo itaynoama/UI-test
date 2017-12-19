@@ -1,7 +1,5 @@
 import {Component, bind} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
-import {HTTP_PROVIDERS} from 'angular2/http';
-import {FORM_PROVIDERS} from 'angular2/common';
 import {
     RouteConfig,
     ROUTER_DIRECTIVES,
@@ -11,16 +9,13 @@ import {
 } from 'angular2/router';
 
 import {Dashboard} from './components/dashboard/dashboard';
-import {Tables} from './components/tables/tables';
-
-import {UserListService} from './services/user_list';
-import {ServerListService} from './services/server_list';
+import {MessageListService} from './services/message_list';
+import {TaskListService} from './services/task_list';
 import {ActivityListService} from './services/activity_list';
 
 
 @RouteConfig([
-    {path: '/', component: Dashboard, name: 'Dashboard'},
-    {path: '/tables', component: Tables, name: 'Tables'}
+    {path: '/', component: Dashboard, name: 'Dashboard'}
 ])
 @Component({
     selector: 'app',
@@ -31,7 +26,7 @@ import {ActivityListService} from './services/activity_list';
 class Main {
 
     mobileView:number = 992;
-    toggle:boolean = true;
+    toggle:boolean = false;
 
     constructor() {
         this.attachEvents();
@@ -61,6 +56,5 @@ class Main {
     }
 }
 
-bootstrap(Main, [ROUTER_PROVIDERS, FORM_PROVIDERS,
-    ROUTER_PROVIDERS, HTTP_PROVIDERS, UserListService, ServerListService, ActivityListService,
+bootstrap(Main, [ROUTER_PROVIDERS, MessageListService, TaskListService, ActivityListService,
     bind(LocationStrategy).toClass(HashLocationStrategy)]);

@@ -1,48 +1,41 @@
 import {Component} from 'angular2/core';
 
 import {Title} from '../title/title';
-
-import {RdLoading} from '../rd-loading/rd-loading';
-import {RdWidget} from '../rd-widget/rd-widget';
-
-import {RdWidgetHeader} from '../rd-widget-header/rd-widget-header';
-import {RdWidgetBody} from '../rd-widget-body/rd-widget-body';
-import {RdWidgetFooter} from '../rd-widget-footer/rd-widget-footer';
-
-import {ServerListView} from '../server-list-view/server-list-view';
-import {ServerListService} from '../../services/server_list';
-
-import {UserListView} from '../user-list-view/user-list-view';
-import {UserListService} from '../../services/user_list';
-
+import {Widget} from '../widget/widget';
+import {WidgetHeader} from '../widget-header/widget-header';
+import {WidgetBody} from '../widget-body/widget-body';
+import {WidgetFooter} from '../widget-footer/widget-footer';
+import {TaskListView} from '../task-list-view/task-list-view';
+import {TaskListService} from '../../services/task_list';
+import {MessageListView} from '../message-list-view/message-list-view';
+import {MessageListService} from '../../services/message_list';
 import {ActivityListView} from '../activity-list-view/activity-list-view';
 import {ActivityListService} from '../../services/activity_list';
-
 import {PieChartView} from '../pie-chart-view/pie-chart-view';
 
 
 @Component({
     selector: 'dashboard',
-    providers: [ServerListService],
+    providers: [TaskListService],
     templateUrl: 'app/components/dashboard/dashboard.html',
     styleUrls: ['app/components/dashboard/dashboard.css'],
-    directives: [Title, RdWidget, RdWidgetHeader, RdWidgetBody,
-        RdWidgetFooter, RdLoading, ServerListView, UserListView, ActivityListView, PieChartView]
+    directives: [Title, Widget, WidgetHeader, WidgetBody,
+        WidgetFooter, TaskListView, MessageListView, ActivityListView, PieChartView]
 })
 export class Dashboard {
-    servers:any[];
-    users:any[];
+    tasks:any[];
+    messages:any[];
     activitys:any[];
 
-    constructor(private serverListService:ServerListService, private userListService:UserListService, private activityListService:ActivityListService) {
-        this.serverListService = serverListService;
-        this.userListService = userListService;
+    constructor(private taskListService:TaskListService, private messageListService:MessageListService, private activityListService:ActivityListService) {
+        this.taskListService = taskListService;
+        this.messageListService = messageListService;
         this.activityListService = activityListService;
     }
 
     ngOnInit() {
-        this.servers = this.serverListService.all();
-        this.users = this.userListService.all();
+        this.tasks = this.taskListService.all();
+        this.messages = this.messageListService.all();
         this.activitys = this.activityListService.all();
     }
 }

@@ -4,13 +4,16 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar">
             <li class="sidebar-main">
-                <a class="">Merkury</a>
+                <a (click)="toggleSidebar()">
+                    Merkury
+                    <span class="menu-icon glyphicon glyphicon-menu-hamburger mobileMenu"></span>
+                </a>
             </li>
             <li class="sidebar-list selected">
-                <a [routerLink]="['Dashboard']"><span class="menu-icon fa fa-home" aria-hidden="true"></span>Home </a>
+                <a href="#">Home <span class="menu-icon fa fa-home" aria-hidden="true"></span></a>
             </li>
             <li class="sidebar-list">
-                <a [routerLink]="['Tables']">Workflow <span class="menu-icon fa fa-table" aria-hidden="true"></span></a>
+                <a href="#">Workflow <span class="menu-icon fa fa-table" aria-hidden="true"></span></a>
             </li>
             <li class="sidebar-list">
                 <a href="#">Statistics <span class="menu-icon fa fa-table" aria-hidden="true"></span></a>
@@ -56,7 +59,7 @@
                         </div>
                     </div>
                     <div class="meta">
-                        <div class="page">
+                        <div class="page mobileDesktop">
                             <a (click)="toggleSidebar()">
                                 <span class="glyphicon glyphicon-menu-hamburger"></span>
                             </a>

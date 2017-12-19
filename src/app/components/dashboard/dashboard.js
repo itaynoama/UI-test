@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../title/title', '../rd-loading/rd-loading', '../rd-widget/rd-widget', '../rd-widget-header/rd-widget-header', '../rd-widget-body/rd-widget-body', '../rd-widget-footer/rd-widget-footer', '../server-list-view/server-list-view', '../../services/server_list', '../user-list-view/user-list-view', '../../services/user_list', '../activity-list-view/activity-list-view', '../../services/activity_list', '../pie-chart-view/pie-chart-view'], function(exports_1, context_1) {
+System.register(['angular2/core', '../title/title', '../widget/widget', '../widget-header/widget-header', '../widget-body/widget-body', '../widget-footer/widget-footer', '../task-list-view/task-list-view', '../../services/task_list', '../message-list-view/message-list-view', '../../services/message_list', '../activity-list-view/activity-list-view', '../../services/activity_list', '../pie-chart-view/pie-chart-view'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', '../title/title', '../rd-loading/rd-loading', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, title_1, rd_loading_1, rd_widget_1, rd_widget_header_1, rd_widget_body_1, rd_widget_footer_1, server_list_view_1, server_list_1, user_list_view_1, user_list_1, activity_list_view_1, activity_list_1, pie_chart_view_1;
+    var core_1, title_1, widget_1, widget_header_1, widget_body_1, widget_footer_1, task_list_view_1, task_list_1, message_list_view_1, message_list_1, activity_list_view_1, activity_list_1, pie_chart_view_1;
     var Dashboard;
     return {
         setters:[
@@ -20,32 +20,29 @@ System.register(['angular2/core', '../title/title', '../rd-loading/rd-loading', 
             function (title_1_1) {
                 title_1 = title_1_1;
             },
-            function (rd_loading_1_1) {
-                rd_loading_1 = rd_loading_1_1;
+            function (widget_1_1) {
+                widget_1 = widget_1_1;
             },
-            function (rd_widget_1_1) {
-                rd_widget_1 = rd_widget_1_1;
+            function (widget_header_1_1) {
+                widget_header_1 = widget_header_1_1;
             },
-            function (rd_widget_header_1_1) {
-                rd_widget_header_1 = rd_widget_header_1_1;
+            function (widget_body_1_1) {
+                widget_body_1 = widget_body_1_1;
             },
-            function (rd_widget_body_1_1) {
-                rd_widget_body_1 = rd_widget_body_1_1;
+            function (widget_footer_1_1) {
+                widget_footer_1 = widget_footer_1_1;
             },
-            function (rd_widget_footer_1_1) {
-                rd_widget_footer_1 = rd_widget_footer_1_1;
+            function (task_list_view_1_1) {
+                task_list_view_1 = task_list_view_1_1;
             },
-            function (server_list_view_1_1) {
-                server_list_view_1 = server_list_view_1_1;
+            function (task_list_1_1) {
+                task_list_1 = task_list_1_1;
             },
-            function (server_list_1_1) {
-                server_list_1 = server_list_1_1;
+            function (message_list_view_1_1) {
+                message_list_view_1 = message_list_view_1_1;
             },
-            function (user_list_view_1_1) {
-                user_list_view_1 = user_list_view_1_1;
-            },
-            function (user_list_1_1) {
-                user_list_1 = user_list_1_1;
+            function (message_list_1_1) {
+                message_list_1 = message_list_1_1;
             },
             function (activity_list_view_1_1) {
                 activity_list_view_1 = activity_list_view_1_1;
@@ -58,29 +55,29 @@ System.register(['angular2/core', '../title/title', '../rd-loading/rd-loading', 
             }],
         execute: function() {
             Dashboard = (function () {
-                function Dashboard(serverListService, userListService, activityListService) {
-                    this.serverListService = serverListService;
-                    this.userListService = userListService;
+                function Dashboard(taskListService, messageListService, activityListService) {
+                    this.taskListService = taskListService;
+                    this.messageListService = messageListService;
                     this.activityListService = activityListService;
-                    this.serverListService = serverListService;
-                    this.userListService = userListService;
+                    this.taskListService = taskListService;
+                    this.messageListService = messageListService;
                     this.activityListService = activityListService;
                 }
                 Dashboard.prototype.ngOnInit = function () {
-                    this.servers = this.serverListService.all();
-                    this.users = this.userListService.all();
+                    this.tasks = this.taskListService.all();
+                    this.messages = this.messageListService.all();
                     this.activitys = this.activityListService.all();
                 };
                 Dashboard = __decorate([
                     core_1.Component({
                         selector: 'dashboard',
-                        providers: [server_list_1.ServerListService],
+                        providers: [task_list_1.TaskListService],
                         templateUrl: 'app/components/dashboard/dashboard.html',
                         styleUrls: ['app/components/dashboard/dashboard.css'],
-                        directives: [title_1.Title, rd_widget_1.RdWidget, rd_widget_header_1.RdWidgetHeader, rd_widget_body_1.RdWidgetBody,
-                            rd_widget_footer_1.RdWidgetFooter, rd_loading_1.RdLoading, server_list_view_1.ServerListView, user_list_view_1.UserListView, activity_list_view_1.ActivityListView, pie_chart_view_1.PieChartView]
+                        directives: [title_1.Title, widget_1.Widget, widget_header_1.WidgetHeader, widget_body_1.WidgetBody,
+                            widget_footer_1.WidgetFooter, task_list_view_1.TaskListView, message_list_view_1.MessageListView, activity_list_view_1.ActivityListView, pie_chart_view_1.PieChartView]
                     }), 
-                    __metadata('design:paramtypes', [server_list_1.ServerListService, user_list_1.UserListService, activity_list_1.ActivityListService])
+                    __metadata('design:paramtypes', [task_list_1.TaskListService, message_list_1.MessageListService, activity_list_1.ActivityListService])
                 ], Dashboard);
                 return Dashboard;
             }());

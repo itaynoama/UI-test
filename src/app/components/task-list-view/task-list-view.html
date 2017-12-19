@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table taskTable">
+        <tbody>
+            <tr *ngFor="#task of model">
+                <td>
+                    <span class="step">{{task.step}}</span>
+                </td>
+                <td>
+                    <div class="textBox">
+                        <h5>{{task.name}}</h5>
+                        <p class="{{task.tooltipcls}}"><i class="fa fa-clock-o" aria-hidden="true"></i>{{task.time}}</p>
+                    </div>
+                </td>
+                <td>
+                    <span class="glypOption">
+                        <i class="glyphicon {{task.icon}}"></i>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
