@@ -1,68 +1,3 @@
-#content-wrapper {
-    padding-left: 0;
-    margin-left: 0;
-    width: 100%;
-    height: auto;
-}
-@media only screen and (min-width: 561px) {
-    #page-wrapper.open {
-        padding-left: 250px;
-    }
-}
-@media only screen and (max-width: 560px) {
-    #page-wrapper.open {
-        padding-left: 70px;
-    }  
-}
-#page-wrapper.open #sidebar-wrapper {
-    left: 150px;
-}
-
-/**
- * Hamburg Menu
- * When the class of 'hamburg' is applied to the body tag of the document, 
- * the sidebar changes it's style to attempt to mimic a menu on a phone app,
- * where the content is overlaying the content, rather than push it.
- */
-@media only screen and (max-width: 560px) {
-    body.hamburg #page-wrapper {
-        padding-left: 0;
-    }
-    body.hamburg #page-wrapper:not(.open) #sidebar-wrapper {
-        position: absolute;
-        left: -100px;
-    }
-    body.hamburg #page-wrapper:not(.open) ul.sidebar .sidebar-title.separator {
-        display: none;
-    }
-    body.hamburg #page-wrapper.open #sidebar-wrapper {
-        position: fixed;
-    }
-    body.hamburg #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
-        margin-left: 0px;
-    }
-    body.hamburg #sidebar-wrapper ul.sidebar li.sidebar-main,
-    body.hamburg .row.header .meta {
-        margin-left: 70px;
-    }
-    body.hamburg #sidebar-wrapper ul.sidebar li.sidebar-main,
-    body.hamburg #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
-        transition: margin-left 0.4s ease 0s;
-    }
-    .sidebar-list.selected a {
-        text-indent: 0px !important;
-    }
-    .mobileMenu {
-        display: block !important;
-    }
-    .mobileDesktop {
-        display: none !important;
-    }
-    .row.header .user > .itemButton {
-        width: 100px;
-    }
-}
-
 
 /*	--------------------------------------------------
 	:: Header
@@ -202,6 +137,61 @@ body {
 #sidebar-wrapper {
     transition: all .4s ease 0s;
 }
+#content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+@media only screen and (min-width: 581px) {
+    #page-wrapper.open {
+        padding-left: 250px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    #page-wrapper.open {
+        padding-left: 70px;
+    }  
+}
+#page-wrapper.open #sidebar-wrapper {
+    left: 150px;
+}
+
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-start;
+}
+/*
+.row > div[class*='col-'] {
+    padding-bottom: 20px;
+}
+*/
+/*
+.col-lg-4 {
+    width: 500px;
+    height: 450px;
+}
+*/
+
+/* col-lg-4 to share a row */
+.col-lg-4, .col-lg-5, .col-lg-7 { 
+    flex: 1 1 auto; 
+}
+@media all and (max-width: 600px) {
+    .flex-container {
+        -webkit-flex-flow: column;
+    }
+}
+    
+
 
 /*	--------------------------------------------------
 	:: Sidebar
@@ -219,8 +209,6 @@ body {
 }
 #page-wrapper:not(.open) .sidebar-list.selected a {
     text-indent: 25px !important; 
-}
-#page-wrapper:not(.open) ul.sidebar .sidebar-list.selected a {
     border-left: 5px solid #5584ff;
     text-indent: 20px;
 }
@@ -253,8 +241,22 @@ ul.sidebar li a {
     text-decoration: none;
     width: 250px;
 }
+/*
 ul.sidebar .sidebar-main {
     height: 65px;
+}
+*/
+ul.sidebar a.logo {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    height: 60px;
+    font-size: 18px;
+    text-indent: 10px;
+}
+ul.sidebar a.logo span {
+    position: relative;
+    top: 3px;
 }
 ul.sidebar .sidebar-main a {
     font-size: 18px;
@@ -265,7 +267,8 @@ ul.sidebar .sidebar-main a:hover {
     cursor: pointer;
 }
 ul.sidebar .sidebar-main .menu-icon {
-    float: right;
+    position: absolute;
+    right: 0;
     font-size: 18px;
     padding-right: 28px;
     line-height: 60px;
@@ -331,17 +334,8 @@ ul.sidebar .sidebar-list .menu-icon {
 	:: Widgets
 	-------------------------------------------------- */
 .widget {
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     background: #ffffff;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    border-color: #e9e9e9;
-}
-.widget .widget-header .pagination,
-.widget .widget-footer .pagination {
-    margin: 0;
+    border: 1px solid #d4d9e3;
 }
 .widget .widget-header {
     color: #000000;
@@ -349,9 +343,6 @@ ul.sidebar .sidebar-list .menu-icon {
     padding: 15px 0px 0px 23px;
     border-bottom: 1px solid #ddd;
     line-height: 2.6em;
-}
-.widget .widget-header i {
-    margin-right: 5px;
 }
 .widget .widget-body {
     padding: 20px;
@@ -362,59 +353,31 @@ ul.sidebar .sidebar-list .menu-icon {
 .widget .widget-body table thead * {
     font-size: 14px !important;
 }
-.widget .widget-body .error {
-    color: #ff0000;
-}
 .widget .widget-body button {
     margin-left: 5px;
 }
-.widget .widget-body div.alert {
-    margin-bottom: 10px;
-}
 .widget .widget-body.large {
-    height: 350px;
+    height: 440px;
     overflow-y: auto;
 }
 .widget .widget-body.medium {
-    height: 300px;
+    height: 330px;
     overflow-y: auto;
 }
 .widget .widget-body.small {
-    height: 150px;
+    height: 300px;
     overflow-y: auto;
 }
 .widget .widget-body.no-padding {
     padding: 0;
 }
-.widget .widget-body.no-padding .error,
-.widget .widget-body.no-padding .message {
-    padding: 20px;
-}
 .widget .widget-footer {
     border-top: 1px solid #e9e9e9;
     padding: 10px;
 }
-.widget .widget-icon {
-    background: #30426a;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    margin-right: 15px;
-}
-.widget .widget-icon i {
-    line-height: 66px;
-    color: #ffffff;
-    font-size: 30px;
-}
 .widget .widget-footer {
     border-top: 1px solid #e9e9e9;
     padding: 10px;
-}
-.widget .widget-title .pagination,
-.widget .widget-footer .pagination {
-    margin: 0;
 }
 .widget .widget-content .title {
     font-size: 28px;
@@ -445,13 +408,24 @@ title {
     border-right: .2em solid #5584ff;
     border-bottom: .2em solid transparent;
 }
-.col-lg-3 .widget-header .pull-left , .col-lg-9 .widget-header .pull-left { 
+.col-lg-5 .widget-header .pull-left , .col-lg-7 .widget-header .pull-left { 
     color: #8492af;
-    font-size: 22px;
+    font-size: 26px;
+}
+.col-lg-5 .widget-header , .col-lg-7 .widget-header {
+    border-bottom: none;
 }
 /*	--------------------------------------------------
 	:: Pie chart 
 	-------------------------------------------------- */
+.chartWarraper {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.item {
+    flex: 0 1 auto; 
+}
 .periodButton button {
     border-radius: 15px;
     float: right;
@@ -466,7 +440,10 @@ title {
     width: 200px;
     height: 200px;
     margin: 40px;
-    border-radius: 100%
+    border-radius: 100%;
+}
+.legend {
+    margin-top: 75px;  
 }
 div.center {
     background: #fff;
@@ -568,9 +545,32 @@ div.center p.sales {
     from {transform: rotate(0deg);}
     to {transform: rotate(80deg);}
 }
-
-
-
+.legend ul li span {
+    color: #8492af;
+    font-size: 16px;
+    line-height: 10px;
+}
+.legend ul {
+    line-height: 25px;
+}
+.legend li {
+    font-size: 25px;
+}
+.websites {
+    color: #25396e;   
+}
+.logo {
+    color: #5584ff;
+}
+.socialMedia {
+    color: #4b74e0;
+}
+.adwords {
+    color: #3755a4;
+}
+.ecommerce {
+    color: #4164c2;
+}
 
 
 
@@ -613,7 +613,7 @@ div.center p.sales {
 .textBox {
     font-size: 12px;
     width: inherit;
-    max-width: calc(100% - 80px);
+/*    max-width: calc(100% - 80px);*/
     height: inherit;
     min-height: 60px;
     position: relative;
@@ -630,15 +630,24 @@ div.center p.sales {
     margin: 0 0 5px;
 }
 .table > tbody > tr > td {
-    padding: 10px 0;
+    padding: 8px 0;
     vertical-align: middle;
     border-top: none;
+}
+.messageTable > tbody > tr > td {
+    padding: 3px 0;
 }
 .table > tbody > tr {
     border-top: 1px solid #ddd;
 }
 .table > tbody > tr:first-child {
     border-top: none;
+}
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        border: none;
+        margin-bottom: 0px; 
+    }
 }
 /*	--------------------------------------------------
 	:: Task Table  
@@ -696,9 +705,11 @@ span.step {
 .messageTable .selected {
     background: #f4f5f8;
 }
+/*
 .messageTable .textBox {
     margin: -5px;
 }
+*/
 .messageTable .media-meta {
 	font-size: 11px;
 	color: #999;
@@ -737,4 +748,95 @@ span.step {
     right: 20px;
     top: 40px;
 }
+/*	--------------------------------------------------
+	:: Line Chart  
+	-------------------------------------------------- */
 
+.lineChart {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.y-labels text {
+   color: #5584ff; 
+}
+.graph {
+    height: 400px;
+    width: 100%;
+}
+.graph .grid {
+    stroke: #dadee7;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+.data {
+    fill: #5584ff;
+    stroke-width: 1; 
+}
+
+
+@media screen and (max-width: 515px) {
+    .legend {
+        margin-top: 0px;  
+    }
+}
+@media screen and (max-width: 480px) {
+    .messageTable .media-photo, span.step, .activityTable .media-photo {
+        margin-left: 5px;
+    }
+    .graph {
+        height: auto;
+    }
+    .widget .widget-body.small {
+        height: auto;
+    }
+    .col-lg-5 .widget-header .pull-left, .col-lg-7 .widget-header .pull-left {
+        font-size: 17px;
+    }
+    
+}
+
+
+/**
+ * Hamburg Menu
+ * When the class of 'hamburg' is applied to the body tag of the document, 
+ * the sidebar changes it's style to attempt to mimic a menu on a phone app,
+ * where the content is overlaying the content, rather than push it.
+ */
+@media only screen and (max-width: 640px) {
+    body.hamburg #page-wrapper {
+        padding-left: 0;
+    }
+    body.hamburg #page-wrapper:not(.open) #sidebar-wrapper {
+        position: absolute;
+        left: -100px;
+    }
+    body.hamburg #page-wrapper:not(.open) ul.sidebar .sidebar-title.separator {
+        display: none;
+    }
+    body.hamburg #page-wrapper.open #sidebar-wrapper {
+        position: fixed;
+    }
+    body.hamburg #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
+        margin-left: 0px;
+    }
+    body.hamburg #sidebar-wrapper ul.sidebar li.sidebar-main,
+    body.hamburg .row.header .meta {
+        margin-left: 70px;
+    }
+    body.hamburg #sidebar-wrapper ul.sidebar li.sidebar-main,
+    body.hamburg #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
+        transition: margin-left 0.4s ease 0s;
+    }
+    
+    .mobileMenu {
+        display: block !important;
+    }
+    .mobileDesktop {
+        display: none !important;
+    }
+    .row.header .user > .itemButton {
+        width: 100px;
+    }
+}

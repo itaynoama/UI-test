@@ -1,40 +1,40 @@
 <title></title>
 
-<div class="row">
-   <div class="col-lg-3">
+<div class="row flex-container">
+   <div class="col-lg-5">
         <widget>
             <widget-header title="Your Sales">
                 <div class="periodButton">
                     <button type="button" class="btn btn-default">Period: <b>Last Year </b><i class="fa fa-angle-down"></i></button>
                 </div>
             </widget-header>
-            <widget-body classes="medium no-padding">
+            <widget-body classes="small no-padding">
                 <pie-chart-view></pie-chart-view>
             </widget-body>
         </widget>
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-7">
         <widget>
             <widget-header title="Report">
                 <div class="periodButton">
                     <button type="button" class="btn btn-default">Period: <b>Last Year </b><i class="fa fa-angle-down"></i></button>
                 </div>
             </widget-header>
-            <widget-body classes="medium no-padding">
-                <server-list-view [model]="servers"></server-list-view>
+            <widget-body classes="small no-padding">
+                <line-chart-view></line-chart-view>
             </widget-body>
         </widget>
     </div> 
 </div>
 
-<div class="row">
+<div class="row flex-container">
     <div class="col-lg-4">
         <widget>
             <widget-header title="Tasks">
                 <div class="numberCircle">2</div>
                 <div class="numberCircleBlue">5</div>
             </widget-header>
-            <widget-body classes="large no-padding">
+            <widget-body classes="medium no-padding">
                 <task-list-view [model]="tasks"></task-list-view>
             </widget-body>
         </widget>
@@ -44,7 +44,7 @@
             <widget-header title="Messages">
                 <div class="numberCircleBlue">2</div>
             </widget-header>
-            <widget-body classes="large no-padding">
+            <widget-body classes="medium no-padding">
                 <message-list-view [model]="messages"></message-list-view>
             </widget-body>
         </widget>
@@ -54,7 +54,7 @@
             <widget-header title="Activity">
                 <div class="numberCircleBlue">10</div>
             </widget-header>
-            <widget-body classes="large no-padding">
+            <widget-body classes="medium no-padding">
                 <activity-list-view [model]="activitys"></activity-list-view>
             </widget-body>
         </widget>

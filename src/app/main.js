@@ -39,7 +39,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/router'
             Main = (function () {
                 function Main() {
                     this.mobileView = 992;
-                    this.toggle = true;
+                    this.toggle = false;
                     this.attachEvents();
                 }
                 Main.prototype.attachEvents = function () {

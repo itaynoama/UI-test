@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../title/title', '../widget/widget', '../widget-header/widget-header', '../widget-body/widget-body', '../widget-footer/widget-footer', '../task-list-view/task-list-view', '../../services/task_list', '../message-list-view/message-list-view', '../../services/message_list', '../activity-list-view/activity-list-view', '../../services/activity_list', '../pie-chart-view/pie-chart-view'], function(exports_1, context_1) {
+System.register(['angular2/core', '../title/title', '../widget/widget', '../widget-header/widget-header', '../widget-body/widget-body', '../widget-footer/widget-footer', '../task-list-view/task-list-view', '../../services/task_list', '../message-list-view/message-list-view', '../../services/message_list', '../activity-list-view/activity-list-view', '../../services/activity_list', '../pie-chart-view/pie-chart-view', '../line-chart-view/line-chart-view'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', '../title/title', '../widget/widget', '../widg
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, title_1, widget_1, widget_header_1, widget_body_1, widget_footer_1, task_list_view_1, task_list_1, message_list_view_1, message_list_1, activity_list_view_1, activity_list_1, pie_chart_view_1;
+    var core_1, title_1, widget_1, widget_header_1, widget_body_1, widget_footer_1, task_list_view_1, task_list_1, message_list_view_1, message_list_1, activity_list_view_1, activity_list_1, pie_chart_view_1, line_chart_view_1;
     var Dashboard;
     return {
         setters:[
@@ -52,6 +52,9 @@ System.register(['angular2/core', '../title/title', '../widget/widget', '../widg
             },
             function (pie_chart_view_1_1) {
                 pie_chart_view_1 = pie_chart_view_1_1;
+            },
+            function (line_chart_view_1_1) {
+                line_chart_view_1 = line_chart_view_1_1;
             }],
         execute: function() {
             Dashboard = (function () {
@@ -75,7 +78,7 @@ System.register(['angular2/core', '../title/title', '../widget/widget', '../widg
                         templateUrl: 'app/components/dashboard/dashboard.html',
                         styleUrls: ['app/components/dashboard/dashboard.css'],
                         directives: [title_1.Title, widget_1.Widget, widget_header_1.WidgetHeader, widget_body_1.WidgetBody,
-                            widget_footer_1.WidgetFooter, task_list_view_1.TaskListView, message_list_view_1.MessageListView, activity_list_view_1.ActivityListView, pie_chart_view_1.PieChartView]
+                            widget_footer_1.WidgetFooter, task_list_view_1.TaskListView, message_list_view_1.MessageListView, activity_list_view_1.ActivityListView, pie_chart_view_1.PieChartView, line_chart_view_1.LineChartView]
                     }), 
                     __metadata('design:paramtypes', [task_list_1.TaskListService, message_list_1.MessageListService, activity_list_1.ActivityListService])
                 ], Dashboard);

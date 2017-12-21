@@ -12,6 +12,7 @@ import {MessageListService} from '../../services/message_list';
 import {ActivityListView} from '../activity-list-view/activity-list-view';
 import {ActivityListService} from '../../services/activity_list';
 import {PieChartView} from '../pie-chart-view/pie-chart-view';
+import {LineChartView} from '../line-chart-view/line-chart-view';
 
 
 @Component({
@@ -20,7 +21,7 @@ import {PieChartView} from '../pie-chart-view/pie-chart-view';
     templateUrl: 'app/components/dashboard/dashboard.html',
     styleUrls: ['app/components/dashboard/dashboard.css'],
     directives: [Title, Widget, WidgetHeader, WidgetBody,
-        WidgetFooter, TaskListView, MessageListView, ActivityListView, PieChartView]
+        WidgetFooter, TaskListView, MessageListView, ActivityListView, PieChartView, LineChartView]
 })
 export class Dashboard {
     tasks:any[];
