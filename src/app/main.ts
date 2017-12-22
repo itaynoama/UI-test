@@ -1,5 +1,9 @@
 import {Component, bind} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
+
+/*
+ * Platform and Environment providers/directives/pipes
+ */
 import {
     RouteConfig,
     ROUTER_DIRECTIVES,
@@ -23,7 +27,8 @@ import {ActivityListService} from './services/activity_list';
     styleUrls: ['app/main.css'],
     directives: [ROUTER_DIRECTIVES]
 })
-class Main {
+
+export class Main {
 
     mobileView:number = 992;
     toggle:boolean = false;
@@ -54,7 +59,11 @@ class Main {
         this.toggle = !this.toggle;
         localStorage.setItem('toggle', this.toggle.toString());
     }
+    
 }
 
+/**
+ * main entry point into Angular2's bootstraping process
+ */
 bootstrap(Main, [ROUTER_PROVIDERS, MessageListService, TaskListService, ActivityListService,
     bind(LocationStrategy).toClass(HashLocationStrategy)]);

@@ -23,6 +23,7 @@ import {LineChartView} from '../line-chart-view/line-chart-view';
     directives: [Title, Widget, WidgetHeader, WidgetBody,
         WidgetFooter, TaskListView, MessageListView, ActivityListView, PieChartView, LineChartView]
 })
+
 export class Dashboard {
     tasks:any[];
     messages:any[];
