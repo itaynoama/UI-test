@@ -137,7 +137,7 @@ body {
     width: 100%;
     height: auto;
 }
-@media only screen and (min-width: 581px) {
+@media only screen and (min-width: 640px) {
     #page-wrapper.open {
         padding-left: 250px;
     }
@@ -183,8 +183,6 @@ body {
     -webkit-flex-flow: row wrap;
     justify-content: flex-start;   /* This aligns items to the start line on main-axis */
 }
-
-
 /* col-lg-4 to share a row */
 .col-lg-4, .col-lg-5, .col-lg-7 { 
     flex: 1 1 auto;
@@ -202,6 +200,9 @@ body {
     .col-lg-4 {
         width: auto;
     }
+}
+.flex-container [class*="col-"] {
+    margin-bottom: 25px;
 }
     
 
@@ -428,16 +429,7 @@ title {
 	:: Pie chart 
 	-------------------------------------------------- */
 .chartWarraper {
-    display: inline-flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-inline-flex;
-    flex-flow: row wrap;
-    justify-content: space-around; /* center it by evenly distributing empty space around items */
-    -webkit-flex-flow: row wrap; /* Safari 6.1+ */
-    -ms-flex-flow: row wrap; /* IE 10 */ 
-    
+    display: flex;
 }
 .item {
     flex: 0 1 auto; 
@@ -462,7 +454,7 @@ title {
     border-radius: 100%;
 }
 .legend {
-    margin-top: 75px;  
+    margin-top: 75px; 
 }
 div.center {
     background: #fff;
@@ -502,8 +494,6 @@ div.center p.sales {
     height: 100%;
     position: absolute;
     width: 100%;
-    font-family: monospace;
-    font-size: 1.5rem;
 }
 	
 #part1 {
@@ -798,34 +788,11 @@ span.step {
 .y-labels {
     font-weight: bold;
 }
-
-@media screen and (max-width: 515px) {
-    .legend {
-        margin-top: 0px;  
+@media only screen and (min-width: 768px) {
+    .chartWarraper {
+        justify-content: center;
     }
 }
-@media screen and (max-width: 480px) {
-    .messageTable .media-photo, span.step, .activityTable .media-photo {
-        margin-left: 5px;
-    }
-    .graph {
-        height: auto;
-    }
-    .widget .widget-body.small {
-        height: auto;
-    }
-    .col-lg-5 .widget-header .pull-left, .col-lg-7 .widget-header .pull-left {
-        font-size: 1.3em;
-    }
-    .activityTable > tbody > tr > td {
-        padding: 4px 0;
-    }
-    .row.header .user > .itemButton {
-        width: 100px;
-    }   
-}
-
-
 /**
  * mobile Menu
  * When the class of 'mobile' is applied to the body tag of the document, 
@@ -875,3 +842,90 @@ span.step {
         width: 220px;
     }
 }
+@media screen and (max-width: 515px) {
+    .legend {
+        margin-top: 50px;  
+    }
+    .legend ul li span {
+        font-size: 13px;
+    }
+    .widget .widget-body.medium {
+        height: auto;
+    }
+    .legend li {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .messageTable .media-photo, span.step, .activityTable .media-photo {
+        margin-left: 5px;
+    }
+    .graph {
+        height: auto;
+    }
+    .widget .widget-body.small {
+        height: auto;
+    }
+    .col-lg-5 .widget-header .pull-left, .col-lg-7 .widget-header .pull-left {
+        font-size: 1.3em;
+    }
+    .activityTable > tbody > tr > td {
+        padding: 4px 0;
+    }
+}
+@media screen and (max-width: 360px) {
+    .part {
+        display: flex;
+    } 
+    .row.header .user > .itemButton {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .periodButton button {
+        font-size: 10px;
+    }
+    .chartWarraper {
+        flex-flow: row wrap;
+    }
+    .row.header .user > .item {
+        width: 42px;
+    }
+    .msg-center {
+        right: 64px;
+    }
+    .row.header .user > .dropdown:after {
+        right: -6px;
+    }
+    .itemButton .btn {
+        font-size: 10px
+    }
+    .itemButton .glyphicon-plus {
+        top: 1px;
+    }
+    .pie-chart {
+        margin-left: 0;
+    }
+    .legend ul li span {
+        font-size: 11px;
+    }
+    .pie-chart {
+        width: 180px;
+        height: 180px;
+    }
+    div.center {
+        width: 120px;
+        height: 120px;
+    }
+    .portion-block {
+        clip: rect(0px, 180px, 180px, 100px);
+    }
+    .circle {
+        clip: rect(0px, 100px, 180px, 0px);
+    }
+    .legend li {
+        font-size: 17px;
+    }
+}
+
+
