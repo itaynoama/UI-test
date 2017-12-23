@@ -1,5 +1,6 @@
-import {Component, bind} from 'angular2/core';
+import {Component, bind, enableProdMode} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
+
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -61,6 +62,8 @@ export class Main {
     }
     
 }
+
+enableProdMode();
 
 /**
  * main entry point into Angular2's bootstraping process

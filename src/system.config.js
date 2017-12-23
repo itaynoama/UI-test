@@ -2,7 +2,8 @@ System.config({
     packages: {
         app: {
             format: 'register',
-            defaultExtension: 'js'
+            defaultExtension: 'js',
+            baseURL: '/UI-test/'
         }
     }
 });
