@@ -3,7 +3,6 @@ System.config({
         app: {
             format: 'register',
             defaultExtension: 'js',
-            baseURL: '/src/'
         }
     }
 });
