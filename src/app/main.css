@@ -204,8 +204,6 @@ body {
 .flex-container [class*="col-"] {
     margin-bottom: 25px;
 }
-    
-
 
 /*	--------------------------------------------------
 	:: Sidebar
@@ -236,12 +234,6 @@ ul.sidebar .sidebar-list a:hover,
 #page-wrapper:not(.open) ul.sidebar .sidebar-title.separator {
   /* Sidebar header */
     background: #1a2d59;
-}
-.mobileMenu {
-    display: none;
-}
-.mobileDesktop {
-    display: block;
 }
 ul.sidebar {
     position: absolute;
@@ -314,13 +306,6 @@ ul.sidebar .sidebar-list .menu-icon {
     width: 50px;
     color: #5584ff;
 }
-/*
-#page-wrapper:not(.open) ul.sidebar .sidebar-list .menu-icon {
-    float: right;
-    padding-right: 29px;
-    width: 70px;
-}
-*/
 #page-wrapper:not(.open) ul.sidebar {
     bottom: 0;
 }
@@ -714,11 +699,6 @@ span.step {
 .messageTable .selected {
     background: #f4f5f8;
 }
-/*
-.messageTable .textBox {
-    margin: -5px;
-}
-*/
 .messageTable .media-meta {
 	font-size: 11px;
 	color: #999;
@@ -795,7 +775,7 @@ span.step {
 }
 /**
  * mobile Menu
- * When the class of 'mobile' is applied to the body tag of the document, 
+ * The class of 'mobile' is applied to the body tag of the document, 
  * the sidebar changes it's style to attempt to mimic a menu on a phone app,
  * where the content is overlaying the content, rather than push it.
  */
@@ -824,13 +804,9 @@ span.step {
     body.mobile #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
         transition: margin-left 0.4s ease 0s;
     }
-    .mobileMenu {
-        display: block !important;
-    }
     .mobileDesktop {
         display: none !important;
     }
-    
     #page-wrapper.open .col-lg-5 .widget-header .pull-left, .col-lg-7 .widget-header .pull-left {
         font-size: 1.3em;
     }
@@ -927,5 +903,3 @@ span.step {
         font-size: 17px;
     }
 }
-
-
