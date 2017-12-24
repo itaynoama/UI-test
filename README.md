@@ -1,6 +1,3 @@
-# Introduction
-
-
 # How to run it ?
 
 ```bash
